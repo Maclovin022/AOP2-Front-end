@@ -1,0 +1,95 @@
+:root{
+    --line-color:#b64a0bfd;
+    --bg-color:#dddada;
+    --text:#222;
+    --muted:#666;
+    --white:#fff;
+    --radius:12px;
+    --max-width:1100px;
+}
+
+header {
+    border-bottom: 5px solid var(--line-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--bg-color);
+}
+
+.logo {
+    display: block;
+    height: 100px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    margin:0;
+    font-family:'Merriweather',serif;
+    color:var(--text);
+    background:#fff;
+}
+
+.wrap{max-width:var(--max-width);margin:0 auto;padding:0 20px}
+
+.hero{padding:28px 0;border-bottom:4px solid var(--line-color);text-align:center}
+.hero h1{margin:0;font-size:2rem}
+.hero p{margin-top:8px;color:var(--muted)}
+
+.content{padding:28px 0 60px}
+
+.grid{display:grid;gap:20px;grid-template-columns:1fr}
+
+.box{background:var(--bg-color);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+
+.box h2{margin:0 0 12px 0;font-size:1.1rem}
+
+label{display:block;margin:10px 0 6px;font-weight:600;font-size:0.95rem}
+input[type="text"],input[type="email"],textarea{
+    width:100%;
+    padding:10px 12px;
+    border-radius:8px;
+    border:1px solid #cfcfcf;
+    background:#fff;
+    font-size:1rem;
+    color:var(--text);
+}
+
+textarea{resize:vertical;min-height:120px}
+
+input:focus,textarea:focus{outline:none;border-color:var(--line-color);box-shadow:0 4px 14px rgba(182,74,11,0.12)}
+
+.actions{margin-top:14px;display:flex;gap:10px;align-items:center}
+
+.btn{background:var(--line-color);color:var(--white);border:none;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer}
+.btn:hover{opacity:0.95}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid #cfcfcf}
+
+.info p{margin:10px 0}
+.info a{color:var(--line-color);text-decoration:none;font-weight:600}
+.info a:hover{text-decoration:underline}
+
+footer{background:var(--bg-color);text-align:center;padding:12px;font-size:1rem;border-top:1px solid rgba(0,0,0,0.04)}
+
+@media(min-width:880px){
+    .grid{grid-template-columns:1fr 360px;align-items:start}
+}
